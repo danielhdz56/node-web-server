@@ -58,7 +58,14 @@ app.get('/', (req, res) => { //req will contain our headers, res will be what we
 app.get('/about', (req, res) => {
     //this allows us to render any of the templates i have set up with my current view engine
     res.render('about.hbs', {
-        pageTitle: 'About Page',
+        pageTitle: 'About Page'
+    });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        welcomeMessage: 'This is my Portfolio'
     });
 });
 
